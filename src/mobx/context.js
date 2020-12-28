@@ -3,9 +3,9 @@ import React from "react";
 import { useLocalObservable } from "mobx-react-lite";
 const ProductContext = React.createContext();
 export const ProductProvider = ({ children }) => {
-  const notesStore = useLocalObservable(productstore);
+  const product = useLocalObservable(productstore);
   return (
-    <ProductContext.Provider value={notesStore}>
+    <ProductContext.Provider value={product}>
       {children}
     </ProductContext.Provider>
   );

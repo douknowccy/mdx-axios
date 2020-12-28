@@ -15,6 +15,10 @@ export function productstore() {
       // console.log(products);
       this.product = products;
       // this.product.push("5566");
+      let unique = products.map((item) => item.category);
+      this.productSource = [...new Set(unique)];
+      // console.log(this.productSource);
     },
+    productSource: [],
   };
 }
